@@ -1,10 +1,12 @@
 public class Animal {
     String favoriteFood;
     String name;
+    static int animalCount;
 
     public Animal(String name, String favoriteFood) {
         this.name = name;
         this.favoriteFood = favoriteFood;
+        animalCount++;
     }
     public void sleep() {
         System.out.println( this.name + " sleeps for 8 hours");
@@ -17,5 +19,8 @@ public class Animal {
         }else{
             sleep();
         }
+    }
+    public void populationCount(){
+        System.out.println(animalCount);
     }
 }
